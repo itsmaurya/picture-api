@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #d8d6d6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::selection{
+  color: #fff;
+  background: #5e5a77;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-data{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+  
+}
+.images{
   display: flex;
   flex-direction: column;
+  background-color: #efefef;
+  height: 300px;
+  margin: 10px;
+}
+img{
+  width: 250px;
+  height: 250px;
+}
+.view{
+  display: flex;
+  font-size: .9rem;
+  
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.view div{
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper{
+  max-width: 550px;
+  padding: 100px 250px;
+  margin-left: 20rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .search-input{
+  background: #fff;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
+
+.search-input input{
+  height: 55px;
+  width: 90%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+
+.search-input .icon{
+  display: flex;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 65px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #002147;
+  cursor: pointer;}
+  .search-input .icon button{
+    background-color: #002147;
+    border: none;
+    color: #fff;
+    width: 65px;
+  }
+
+  @media (max-width: 800px) {
+
+    .wrapper{
+        max-width: 250px;
+        padding: 250px 2500px;
+        margin-left: 3rem;
+      }
+  }
+  @media (max-width: 500px) {
+
+    .wrapper{
+        max-width: 100px;
+        padding: 250px 250px;
+        margin-left: 1rem;
+      }
+  }
+  @media (min-width: 801px) and (max-width: 1200px) {
+    .wrapper{
+        max-width: 450px;
+        padding: 250px 250px;
+        margin-left: 20rem;
+      }
+      
+  }
+
+@media (orientation: landscape) and (max-height: 500px) {
+
+    .wrapper{
+        max-width: 150px;
+        padding: 250px 250px;
+        margin-left: 20px;
+      }
+      
+}
+  

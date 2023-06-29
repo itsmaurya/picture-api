@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [name, setName] = useState("");
+  const [images, setImages] = useState([]);
+
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(
+        `https://pixabay.com/api/?key=37967626-2a1ec9e3eaa5e35c5b4e6c3f5&q=${encodeURIComponent(
+          name
+        )}`
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch images from Pixabay API");
+      }
+
+      const data = await response.json();
+      setImages(data.hits);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="wrapper">
+        <div className="search-input" >
+          <a href="#" target="_blank" hidden></a>
+          <input
+            type="text"
+            value={name}
+            placeholder="Type to search.."
+            onChange={(e) => setName(e.target.value)}
+          />
+          <div className="autocom-box"></div>
+          <div className="icon" onClick={handleSearch}>
+            <button>Search</button>
+          </div>
+        </div>
+        
+      </div>
+      <div className="image-data">
+        {images.map((image) => (
+          <div className="images">
+            <img key={image.id} src={image.webformatURL} alt={image.tags} />
+            <div className="view">
+              <div><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Likes {image.likes}</div>
+              <div><ion-icon name="eye-outline"></ion-icon> Views {image.views} </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
