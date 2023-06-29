@@ -1,40 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixabay Image Search - README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-    
-    h1 {
-      margin-top: 0;
-    }
-    
-    h2 {
-      margin-bottom: 10px;
-    }
-    
-    p {
-      margin-bottom: 20px;
-    }
-    
-    code {
-      background-color: #f4f4f4;
-      padding: 4px 8px;
-      font-family: Consolas, monospace;
-    }
-    
-    img {
-      margin-top: 10px;
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+
+  
 </head>
 <body>
   <h1>Picture API</h1>
@@ -67,8 +35,7 @@
   <h2>API Key</h2>
   <p>In order to use the Pixabay API, you need to sign up for a free API key at <a href="https://pixabay.com/api/docs/" target="_blank">https://pixabay.com/api/docs/</a>. Once you have the API key, replace <code>'YOUR_PIXABAY_API_KEY'</code> in the <code>PixabaySearch.js</code> file with your actual API key.</p>
 
-  <h2>Screenshot</h2>
-  <img src="screenshot.png" alt="Application Screenshot">
+
 
   <h2>Acknowledgements<h2/>
  <p>This project uses the Pixabay API for fetching images. Visit their website at https://pixabay.com/ for more information.<p/>
