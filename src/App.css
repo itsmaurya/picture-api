@@ -14,7 +14,54 @@ body{
   color: #fff;
   background: #5e5a77;
 }
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  
 
+}
+.linkedin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: #0077b5;
+  color: #fff;
+  border-radius: 60%;
+  padding: 5px;
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+}
+.github{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+}
+.github i, .linkedin i{
+  font-size: 20px;
+  
+}
+.linkedin:hover{
+  background-color: #fff;
+  color: #0077b5;
+
+}
+
+.github:hover{
+  background-color: #fff;
+  color: #000;
+}
 .image-data{
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +96,7 @@ img{
 
 .wrapper{
   max-width: 550px;
-  padding: 100px 250px;
+  padding: 70px 250px;
   margin-left: 20rem;
 }
 
@@ -123,17 +170,72 @@ img{
     border: none;
     color: #fff;
     width: 65px;
+    border-radius: 5px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
 
     .wrapper{
-        max-width: 250px;
-        padding: 250px 2500px;
-        margin-left: 3rem;
+      max-width: 370px;
+      padding: 70px 25px;
+      margin-left: 1px;
+    }
+
+    .wrapper .search-input{
+      background: #fff;
+      width: 350px;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+    }
+    
+    .search-input input{
+      height: 55px;
+      width: 90%;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 0 60px 0 20px;
+      font-size: 18px;
+      box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    }
+      
+        .image-data{
+          display: flex;
+          flex-wrap: wrap;
+          
+          margin: 4px;
+          justify-content: center;
+          align-items: center;
+        }
+        .images{
+          display: flex;
+          background-color: #efefef;
+          height: 250px;
+          margin: 7px;
+        }
+        img{
+          width: 200px;
+          height: 200px;
+        }
+        .view{
+          display: flex;
+          font-size: .7rem;
+          
+          margin: 5px;
+          justify-content: center;
+          align-items: center;
+        }
+        .view div{
+          align-items: center;
+          justify-content: center;
+          margin: 10px;
+        }
+
+
       }
-  }
-  @media (max-width: 500px) {
+  
+  /* @media (max-width: 500px) {
 
     .wrapper{
         max-width: 100px;
@@ -148,15 +250,7 @@ img{
         margin-left: 20rem;
       }
       
-  }
+  } */
 
-@media (orientation: landscape) and (max-height: 500px) {
 
-    .wrapper{
-        max-width: 150px;
-        padding: 250px 250px;
-        margin-left: 20px;
-      }
-      
-}
   

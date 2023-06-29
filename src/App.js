@@ -25,9 +25,13 @@ function App() {
   };
   return (
     <div>
+      <div className="head">
+        <a href="https://www.linkedin.com/in/mauryaavi550" className="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/itsmaurya" className="github"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
       <div className="wrapper">
         <div className="search-input" >
-          <a href="#" target="_blank" hidden></a>
+          
           <input
             type="text"
             value={name}
