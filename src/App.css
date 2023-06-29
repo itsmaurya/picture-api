@@ -169,7 +169,7 @@ img{
     background-color: #002147;
     border: none;
     color: #fff;
-    width: 65px;
+    width: 75px;
     border-radius: 5px;
   }
 
@@ -183,7 +183,7 @@ img{
 
     .wrapper .search-input{
       background: #fff;
-      width: 350px;
+      width: 320px;
       border-radius: 5px;
       position: relative;
       box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
@@ -211,7 +211,7 @@ img{
         .images{
           display: flex;
           background-color: #efefef;
-          height: 250px;
+          height: 200px;
           margin: 7px;
         }
         img{
@@ -221,8 +221,7 @@ img{
         .view{
           display: flex;
           font-size: .7rem;
-          
-          margin: 5px;
+          margin-inline: 5px;
           justify-content: center;
           align-items: center;
         }
