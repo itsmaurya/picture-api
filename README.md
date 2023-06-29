@@ -43,8 +43,11 @@
  <h2>Usage</h2>
  <p>
 1.Enter a search term in the input field.
+   
 2.Click the "Search" button.
+
 3.The application will fetch images related to the search term from the Pixabay API.
+
 4.The retrieved images will be displayed below the search input.
    
  </p>
